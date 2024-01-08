@@ -28,6 +28,13 @@ def factorial(num: int) -> int:
     return f
 
 
+def dir2(obj) -> None:
+    for each_attr in dir(obj):
+        if not each_attr.startswith('_'):
+            print(each_attr, end=', ')
+    print()
+
+
 if __name__ == '__main__':
     print(max_days(1, 2024))
     print(factorial(10))
