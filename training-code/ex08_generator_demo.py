@@ -8,6 +8,7 @@ def fn():
     print('sending 400')
     yield 500
 
+
 if __name__ == '__main__':
     f = fn()
     print(f'type of f is {type(f)}')
