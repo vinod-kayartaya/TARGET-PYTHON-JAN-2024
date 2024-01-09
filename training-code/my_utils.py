@@ -28,11 +28,20 @@ def factorial(num: int) -> int:
     return f
 
 
-def dir2(obj) -> None:
-    for each_attr in dir(obj):
-        if not each_attr.startswith('_'):
-            print(each_attr, end=', ')
-    print()
+def is_float(s: str) -> bool:
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+
+
+def dir2(obj) -> list:
+    return [
+        each_attr
+        for each_attr in dir(obj)
+        if not each_attr.startswith('_')
+    ]
 
 
 if __name__ == '__main__':
