@@ -21,6 +21,7 @@ def factorial(num: int) -> int:
         raise TypeError(f'num must be int, but got {type(num)}')
     if num < 0:
         raise ValueError('num must be > 0')
+
     f = 1
     while num:
         f *= num

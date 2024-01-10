@@ -1,10 +1,14 @@
+from pprint import pprint
+
+
 class Person:
     def __init__(self, **kwargs):
-        self.__name = kwargs.get('name')
-        self.__age = kwargs.get('age')
+        # call the setters
+        self.name = kwargs.get('name')
+        self.age = kwargs.get('age')
 
     @property
-    def name(self):
+    def name(self) -> str:
         return self.__name.upper() if self.__name is not None else self.__name
 
     @name.setter
@@ -35,7 +39,7 @@ class Person:
 
 
 if __name__ == '__main__':
-    p1 = Person(name='John', age=55)
+    p1 = Person(name='John', age=550)
     p2 = Person(name='Jane')
 
     p1.name = 'John'  # setter for 'name' called here

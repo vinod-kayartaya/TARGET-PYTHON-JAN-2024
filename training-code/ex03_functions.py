@@ -19,6 +19,7 @@ def say_hello() -> None:
 
 
 def add(*numbers) -> float:
+    print(f'len(numbers) = {len(numbers)}')
     total = 0
     for each_num in numbers:
         if type(each_num) in (int, float):
@@ -32,5 +33,8 @@ if __name__ == '__main__':
     # greet(city='Nagpur', name='Nived')
     # greet('Uday')
     # greet(10)
-    n = add(10, 20.9, 'vinod', False, 30)  # you may pass any number of arguments
-    print(f'n is {n}')
+    # n = add(10, 20.9, 'vinod', False, 30)  # you may pass any number of arguments
+    # print(f'n is {n}')
+    t = (10, 20, 30, 40)
+    x = add(*t)
+    print(f'x is {x}')
